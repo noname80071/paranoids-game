@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://thw40vt13b6v"]
+
+[ext_resource type="Script" uid="uid://c6eqhldeoyult" path="res://Characters/Scripts/test_char.gd" id="1_vgqql"]
+[ext_resource type="Resource" uid="uid://cnm7l1yxmwwy" path="res://Characters/Resources/test_char.tres" id="2_6t5aa"]
+[ext_resource type="PackedScene" uid="uid://cwfsdk1uxcqq3" path="res://Scenes/PlayerUI.tscn" id="2_cvnsp"]
+[ext_resource type="PackedScene" uid="uid://bfopcepvp3qd1" path="res://Scenes/mage.tscn" id="3_vgqql"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v0iea"]
+size = Vector3(2.47308, 2.60736, 2.35107)
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_vgqql")
+character_resource = ExtResource("2_6t5aa")
+
+[node name="Mage" parent="." instance=ExtResource("3_vgqql")]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0, 0, 0)
+
+[node name="PlayerUI" parent="." instance=ExtResource("2_cvnsp")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.950174, 0.311721, 0, -0.311721, 0.950174, 0, 1.108, 1.62061)
+
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+target_position = Vector3(0, 0, -100)
+collide_with_areas = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0219421, 0.273419, -0.0286621)
+shape = SubResource("BoxShape3D_v0iea")

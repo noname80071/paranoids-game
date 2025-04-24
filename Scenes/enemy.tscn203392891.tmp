@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://pfltj4kr28jg"]
+
+[ext_resource type="Script" uid="uid://ckwu8f375ywdq" path="res://Scripts/enemy.gd" id="1_hghv2"]
+[ext_resource type="Resource" uid="uid://cke4dx1av626m" path="res://Items/Resources/tibloko.tres" id="2_1f0kj"]
+[ext_resource type="Resource" uid="uid://bmm4vgwhiwp2l" path="res://Mobs/Resources/test_mob.tres" id="3_afpow"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hghv2"]
+albedo_color = Color(0.410327, 5.83585e-07, 1.44392e-07, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ne65n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ne65n"]
+
+[node name="Enemy" type="CharacterBody3D" groups=["enemy"]]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+axis_lock_linear_y = true
+script = ExtResource("1_hghv2")
+drop_item_res = ExtResource("2_1f0kj")
+enemy_data = ExtResource("3_afpow")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_hghv2")
+mesh = SubResource("BoxMesh_ne65n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_ne65n")

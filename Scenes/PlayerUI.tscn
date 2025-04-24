@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwfsdk1uxcqq3"]
+
+[ext_resource type="Script" uid="uid://deb3v5pmj00ff" path="res://Scripts/PlayerUI.gd" id="1_8tgur"]
+[ext_resource type="Texture2D" uid="uid://xgl20gbeybkk" path="res://focus.png" id="2_hfrq2"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_8tgur")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HPBar" type="ProgressBar" parent="Control"]
+layout_mode = 1
+offset_right = 500.0
+offset_bottom = 30.0
+step = 1.0
+
+[node name="Balance" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "0"
+
+[node name="Crosshair" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 512.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_hfrq2")

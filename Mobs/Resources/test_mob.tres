@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MobResource" load_steps=2 format=3 uid="uid://bmm4vgwhiwp2l"]
+
+[ext_resource type="Script" uid="uid://jopde0nrk8y" path="res://Mobs/Scripts/mob_resource.gd" id="1_wafkf"]
+
+[resource]
+script = ExtResource("1_wafkf")
+name = "test"
+stats = {
+"attack_cooldown": 10.0,
+"attack_damage": 10.0,
+"attack_range": 0.5,
+"health": 30.0,
+"move_speed": 1.0
+}
+metadata/_custom_type_script = "uid://jopde0nrk8y"

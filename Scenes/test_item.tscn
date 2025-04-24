@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://gigody0kc7ly"]
+
+[ext_resource type="Script" uid="uid://8ul7ixmbcyko" path="res://Scripts/test_item.gd" id="1_gyusi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l4dvj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0l3m6"]
+albedo_color = Color(0.453935, 0.63965, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gyusi"]
+
+[node name="Item" type="Node3D"]
+script = ExtResource("1_gyusi")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_l4dvj")
+surface_material_override/0 = SubResource("StandardMaterial3D_0l3m6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("BoxShape3D_gyusi")

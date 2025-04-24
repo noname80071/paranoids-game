@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=7 format=3 uid="uid://d2wngfe2ax1jg"]
+
+[ext_resource type="Script" uid="uid://khcvkf87mw6o" path="res://Items/Effects/item_effect.gd" id="1_rg1i2"]
+[ext_resource type="Script" uid="uid://b40ax4qo8iaop" path="res://Items/Effects/move_speed.gd" id="2_3lsib"]
+[ext_resource type="Script" uid="uid://cgw8ttaqnlqob" path="res://Items/item_resource.gd" id="2_qmwhb"]
+[ext_resource type="PackedScene" uid="uid://gigody0kc7ly" path="res://Scenes/test_item.tscn" id="3_nv2mj"]
+[ext_resource type="PackedScene" uid="uid://drwy3nh8o3wo2" path="res://Scenes/item.tscn" id="5_5nl6o"]
+
+[sub_resource type="Resource" id="Resource_khvqh"]
+script = ExtResource("2_3lsib")
+amount = 3.0
+name = "move_speed"
+stat_name = "speed"
+mod_type = 0
+source_name = "move speed"
+effect_type = ""
+metadata/_custom_type_script = "uid://b40ax4qo8iaop"
+
+[resource]
+script = ExtResource("2_qmwhb")
+id = ""
+name = "speed"
+description = "Увеличивает скорость передвижения "
+price = 100
+texture = ExtResource("5_5nl6o")
+model = ExtResource("3_nv2mj")
+grid_cells = Array[Vector2i]([Vector2i(0, 0)])
+item_type = ""
+effects = Array[ExtResource("1_rg1i2")]([SubResource("Resource_khvqh")])
+metadata/_custom_type_script = "uid://cgw8ttaqnlqob"

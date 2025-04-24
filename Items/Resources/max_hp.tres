@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=7 format=3 uid="uid://bqldppxe87sd3"]
+
+[ext_resource type="Script" uid="uid://cv352isqldbv7" path="res://Items/Effects/max_hp.gd" id="1_36d1l"]
+[ext_resource type="Script" uid="uid://khcvkf87mw6o" path="res://Items/Effects/item_effect.gd" id="1_hirmv"]
+[ext_resource type="Script" uid="uid://cgw8ttaqnlqob" path="res://Items/item_resource.gd" id="2_ib2uc"]
+[ext_resource type="PackedScene" uid="uid://gigody0kc7ly" path="res://Scenes/test_item.tscn" id="3_e7w5y"]
+[ext_resource type="PackedScene" uid="uid://drwy3nh8o3wo2" path="res://Scenes/item.tscn" id="5_rpwp7"]
+
+[sub_resource type="Resource" id="Resource_e4ko1"]
+script = ExtResource("1_36d1l")
+amount = 10
+name = "max_hp"
+stat_name = "max_hp"
+mod_type = 1
+source_name = ""
+effect_type = ""
+metadata/_custom_type_script = "uid://cv352isqldbv7"
+
+[resource]
+script = ExtResource("2_ib2uc")
+id = "hp"
+name = "hp"
+description = ""
+price = 0
+texture = ExtResource("5_rpwp7")
+model = ExtResource("3_e7w5y")
+grid_cells = Array[Vector2i]([Vector2i(0, 0)])
+item_type = ""
+effects = Array[ExtResource("1_hirmv")]([SubResource("Resource_e4ko1")])
+metadata/_custom_type_script = "uid://cgw8ttaqnlqob"

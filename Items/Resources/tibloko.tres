@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=6 format=3 uid="uid://cke4dx1av626m"]
+
+[ext_resource type="Script" uid="uid://khcvkf87mw6o" path="res://Items/Effects/item_effect.gd" id="1_tbam4"]
+[ext_resource type="Script" uid="uid://cqqe2sgknqn2a" path="res://Items/Effects/effect_heal.gd" id="2_nnyft"]
+[ext_resource type="Script" uid="uid://cgw8ttaqnlqob" path="res://Items/item_resource.gd" id="2_ye2lj"]
+[ext_resource type="PackedScene" uid="uid://drwy3nh8o3wo2" path="res://Scenes/item.tscn" id="3_nnyft"]
+
+[sub_resource type="Resource" id="Resource_ye2lj"]
+script = ExtResource("2_nnyft")
+heal_amount = 10
+effect_type = ""
+metadata/_custom_type_script = "uid://cqqe2sgknqn2a"
+
+[resource]
+script = ExtResource("2_ye2lj")
+id = "tibloko"
+name = "tibloko"
+texture = ExtResource("3_nnyft")
+grid_cells = Array[Vector2i]([Vector2i(0, 0)])
+item_type = ""
+effects = Array[ExtResource("1_tbam4")]([SubResource("Resource_ye2lj")])
+metadata/_custom_type_script = "uid://cgw8ttaqnlqob"
